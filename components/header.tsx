@@ -10,7 +10,7 @@ type NavItemProps = {
 
 export function SiteHeader() {
   return (
-    <header className="border-border/40 border-b p-4">
+    <header className="sticky top-0 z-50 w-full border border-border/40 bg-background/95 p-2 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex items-center justify-between gap-4">
         <Logo />
         <Navbar />
