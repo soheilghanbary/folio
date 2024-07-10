@@ -108,7 +108,7 @@ const FeaturedProjects = () => {
               i === 3 && 'md:col-span-2',
             )}
           >
-            <div className="transition-all group-hover:pl-2">
+            <div className="transition-all md:group-hover:pl-2">
               <h2 className="font-bold text-base/8">{p.name}</h2>
               <p className="text-muted-foreground text-sm/6">{p.description}</p>
             </div>
