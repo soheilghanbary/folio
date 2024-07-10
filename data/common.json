@@ -1,0 +1,61 @@
+{
+  "title": "Soheil Ghanbary",
+  "subTitle": "Full Stack Web Developer",
+  "description": "Obsessed with developer experience, robust, scalable and user-friendly applications.",
+  "featureProjects": [
+    {
+      "name": "Kian Store",
+      "description": "The 🚀 Store management of KianErtebat Arvand",
+      "url": "https://github.com/soheilghanbary"
+    },
+    {
+      "name": "Webkade",
+      "description": "Top 🌎 Web application sharing platform",
+      "url": "https://github.com/soheilghanbary"
+    },
+    {
+      "name": "Kharjino",
+      "description": "Personal 💵 expense management software",
+      "url": "https://github.com/soheilghanbary"
+    },
+    {
+      "name": "MyRepeater",
+      "description": "The company's website for the production and sale of all kinds of mobile antenna amplification devices",
+      "url": "https://myrepeater.ir"
+    },
+    {
+      "name": "Jobino",
+      "description": "Advanced job application based on the latest web technology",
+      "url": "https://myrepeater.ir"
+    },
+    {
+      "name": "Kian Store",
+      "description": "The 🚀 Store management of KianErtebat Arvand",
+      "url": "https://github.com/soheilghanbary"
+    },
+    {
+      "name": "Webkade",
+      "description": "Top 🌎 Web application sharing platform",
+      "url": "https://github.com/soheilghanbary"
+    },
+    {
+      "name": "Kharjino",
+      "description": "Personal 💵 expense management software",
+      "url": "https://github.com/soheilghanbary"
+    }
+  ],
+  "skills": [
+    {
+      "name": "React.JS",
+      "description": "The JavaScript Libraries for Create User Interface"
+    },
+    {
+      "name": "Next.JS",
+      "description": "The React Framework for Production"
+    },
+    {
+      "name": "tRPC",
+      "description": "Move Fast and Break Nothing. End-to-end typesafe APIs made easy."
+    }
+  ]
+}
