@@ -2,6 +2,7 @@ import '@/assets/app.css';
 import { SiteFooter } from '@/components/footer';
 import { SiteHeader } from '@/components/header';
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -33,6 +34,7 @@ export default function RootLayout({
           <main className="container mx-auto p-4">{children}</main>
           <SiteFooter />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
