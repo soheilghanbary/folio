@@ -21,10 +21,10 @@ export function SiteHeader() {
 }
 
 const Logo = () => (
-  <div className="flex items-center gap-1 text-primary">
+  <Link href={'/'} className="flex items-center gap-1 text-primary">
     <FlameIcon className="size-5" />
-    <h6 className="font-extrabold text-lg/6">Soheil Ghanbary</h6>
-  </div>
+    <h6 className="font-extrabold text-lg/6">SG</h6>
+  </Link>
 );
 
 const Navbar = () => (

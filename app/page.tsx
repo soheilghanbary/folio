@@ -1,7 +1,7 @@
 import { FadeText } from '@/components/magicui/fade-text';
 import NumberTicker from '@/components/magicui/number-ticker';
 import ShimmerButton from '@/components/magicui/shimmer-button';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import c from '@/data/common.json';
 import { cn } from '@/lib/utils';
 import {
@@ -65,10 +65,14 @@ const Hero = () => {
           text={c.description}
         />
         <div className="flex items-center justify-center gap-4">
-          <Button fullRounded disabled>
+          <a
+            href="/resume.pdf"
+            download={true}
+            className={cn(buttonVariants({ fullRounded: true }))}
+          >
             <DownloadIcon className="mr-2 size-4" />
             Get resume
-          </Button>
+          </a>
           <a
             target="_blank"
             href="https://soheilghanbary.ir"

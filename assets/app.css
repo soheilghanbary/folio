@@ -61,11 +61,12 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-none select-none;
+    -webkit-tap-highlight-color: transparent
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overscroll-contain;
   }
 }
 
