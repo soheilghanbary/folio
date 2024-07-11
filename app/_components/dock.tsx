@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from 'lucide-react';
+import { HomeIcon, MailIcon, PencilIcon } from 'lucide-react';
 import Link from 'next/link';
 import type React from 'react';
 
@@ -74,7 +74,7 @@ const DATA = {
 export function DockDemo() {
   return (
     <TooltipProvider>
-      <div className="-translate-x-1/2 fixed bottom-10 left-1/2 hidden md:inline">
+      <div className="-translate-x-1/2 fixed bottom-10 left-1/2">
         <Dock direction="middle">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.href}>
