@@ -22,7 +22,8 @@
       "recommended": true,
       "suspicious": {
         "noExplicitAny": "off",
-        "noShadowRestrictedNames": "off"
+        "noShadowRestrictedNames": "off",
+        "noArrayIndexKey": "off"
       },
       "nursery": {
         "useSortedClasses": {
@@ -35,7 +36,11 @@
         }
       },
       "style": {
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "useSelfClosingElements": {
+          "level": "warn",
+          "fix": "safe"
+        }
       },
       "correctness": {
         "useExhaustiveDependencies": "off"

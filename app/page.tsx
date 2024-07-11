@@ -15,6 +15,8 @@ import {
 import Link from 'next/link';
 import { GlobeSection } from './_components/globe';
 import { Skills } from './_components/skills';
+import { ExperienceSection } from './_components/experience-section';
+import { DockDemo } from './_components/dock';
 
 export default function HomePage() {
   return (
@@ -23,6 +25,8 @@ export default function HomePage() {
       <FeaturedProjects />
       <Skills />
       <AboutMe />
+      <ExperienceSection />
+      <DockDemo />
     </section>
   );
 }
