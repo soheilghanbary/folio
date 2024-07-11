@@ -1,3 +1,4 @@
+import { MotionDiv } from '@/components/framer-motion';
 import { FadeText } from '@/components/magicui/fade-text';
 import NumberTicker from '@/components/magicui/number-ticker';
 import ShimmerButton from '@/components/magicui/shimmer-button';
@@ -13,10 +14,10 @@ import {
   TwitterIcon,
 } from 'lucide-react';
 import Link from 'next/link';
+import { DockDemo } from './_components/dock';
+import { ExperienceSection } from './_components/experience-section';
 import { GlobeSection } from './_components/globe';
 import { Skills } from './_components/skills';
-import { ExperienceSection } from './_components/experience-section';
-import { DockDemo } from './_components/dock';
 
 export default function HomePage() {
   return (
@@ -68,7 +69,12 @@ const Hero = () => {
           }}
           text={c.description}
         />
-        <div className="flex items-center justify-center gap-4">
+        <MotionDiv
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="flex items-center justify-center gap-4"
+        >
           <a
             href="/resume.pdf"
             download={true}
@@ -91,7 +97,7 @@ const Hero = () => {
             <GithubIcon className="mr-2 size-4" />
             Source
           </a>
-        </div>
+        </MotionDiv>
       </div>
     </section>
   );
