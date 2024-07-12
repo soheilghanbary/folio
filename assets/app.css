@@ -38,7 +38,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
+    --primary: 252.5 94.7% 85.1%;
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
@@ -61,7 +61,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-none select-none;
+    @apply border-border outline-none select-none scroll-smooth;
     -webkit-tap-highlight-color: transparent
   }
 
