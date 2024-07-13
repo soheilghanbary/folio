@@ -1,42 +1,169 @@
-import Marquee from '@/components/magicui/marquee';
-import { skills } from '@/data/skills';
-import { cn } from '@/lib/utils';
+"use client";
+import { animated, useSpring } from "@react-spring/web";
+import { useRef } from "react";
+import {
+  CssIcon,
+  NestIcon,
+  LaravelIcon,
+  NuxtIcon,
+  WordpressIcon,
+  PrismaIcon,
+  TRPCIcon,
+  NodeIcon,
+  GithubIcon,
+  PythonIcon,
+  ReactIcon,
+  TypeScriptIcon,
+  SassIcon,
+  ReduxIcon,
+  VueIcon,
+  JsIcon,
+  TailwindIcon,
+} from "~/assets/icons";
+import useIntersectionObserver from "~/lib/hooks/useIntersectionObserver";
+import styles from "~/styles/modules/skills.module.css";
 
-type SkillProps = (typeof skills)[0];
+interface SkillsProps {
+  title: string;
+}
 
-const SkillCard = ({ icon: Icon, name, description }: SkillProps) => {
+interface SkillProps {
+  icon: any;
+  title: string;
+  level: string;
+}
+
+const skills: SkillProps[] = [
+  {
+    icon: ReactIcon,
+    title: "React",
+    level: "advanced",
+  },
+  {
+    icon: TypeScriptIcon,
+    title: "TypeScript",
+    level: "advanced",
+  },
+  {
+    icon: JsIcon,
+    title: "JavaScript ES2023",
+    level: "advanced",
+  },
+  {
+    icon: TailwindIcon,
+    title: "Tailwind",
+    level: "advanced",
+  },
+  {
+    icon: CssIcon,
+    title: "CSS3",
+    level: "advanced",
+  },
+  {
+    icon: SassIcon,
+    title: "Sass",
+    level: "advanced",
+  },
+  {
+    icon: ReduxIcon,
+    title: "Redux",
+    level: "medium",
+  },
+  {
+    icon: NodeIcon,
+    title: "Node.JS",
+    level: "medium",
+  },
+  {
+    icon: NestIcon,
+    title: "Nest.JS",
+    level: "advanced",
+  },
+  {
+    icon: TRPCIcon,
+    title: "tRPC",
+    level: "advanced",
+  },
+  {
+    icon: PrismaIcon,
+    title: "Prisma",
+    level: "advanced",
+  },
+  {
+    icon: GithubIcon,
+    title: "Github",
+    level: "advanced",
+  },
+  {
+    icon: LaravelIcon,
+    title: "Laravel",
+    level: "advanced",
+  },
+  {
+    icon: WordpressIcon,
+    title: "WordPress",
+    level: "advanced",
+  },
+  {
+    icon: VueIcon,
+    title: "Vue.JS",
+    level: "medium",
+  },
+  {
+    icon: NuxtIcon,
+    title: "Nuxt",
+    level: "medium",
+  },
+  {
+    icon: PythonIcon,
+    title: "Python",
+    level: "medium",
+  },
+];
+
+export default function Skills({ title }: SkillsProps) {
+  const triggerRef = useRef<any>(null);
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: false,
+  });
+  const itemProps = useSpring({
+    from: { y: 50, opacity: 0 },
+    to: {
+      y: dataRef?.isIntersecting ? 0 : 50,
+      opacity: dataRef?.isIntersecting ? 1 : 0,
+    },
+    delay: 300,
+    config: {
+      duration: 600,
+    },
+  });
+
   return (
-    <div
-      className={cn(
-        'relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4',
-        'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
-        // dark styles
-        'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
-      )}
-    >
-      <Icon className="size-8" />
-      <h2 className="font-bold text-base/8">{name}</h2>
-      <p className="text-muted-foreground text-xs/5">{description}</p>
-    </div>
-  );
-};
-
-export function Skills() {
-  return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background shadow-sm">
-      <h2 className="mb-8 font-bold text-4xl">My Skills</h2>
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {skills.map((s) => (
-          <SkillCard key={s.name} {...s} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {skills.map((s) => (
-          <SkillCard key={s.name} {...s} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background" />
+    <div id="skills" className={`${styles.container}`} ref={triggerRef}>
+      <animated.h2 style={itemProps}>{title}</animated.h2>
+      <ul className={styles.items}>
+        {skills.map((item, i) => {
+          const itemProps = useSpring({
+            from: { opacity: 0 },
+            to: {
+              opacity: dataRef?.isIntersecting ? 1 : 0,
+            },
+            delay: i * 100,
+            config: {
+              duration: 1000,
+            },
+          });
+          return (
+            <animated.li key={item.title} style={itemProps}>
+              <item.icon />
+              <div className="flex items-center gap-2">
+                <span className="text-heading">{item.title}</span>
+                <span className="text-sm text-body">{item.level}</span>
+              </div>
+            </animated.li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
