@@ -29,7 +29,7 @@ export default function HomePage() {
 const AboutMe = () => {
   return (
     <section className="space-y-8">
-      <h2 className="font-extrabold text-2xl text-primary">About Me</h2>
+      <h2 className="font-semibold text-2xl md:text-3xl">About Me</h2>
       <div className="grid gap-4 md:grid-cols-2">
         <GlobeSection />
         <AboutConnect />

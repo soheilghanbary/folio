@@ -6,8 +6,11 @@ import { cn } from '@/lib/utils';
 
 export function ExperienceSection() {
   return (
-    <section className="animate-delay-700 animate-fade-up pb-4" id="experience">
-      <div className="mb-10 ">
+    <section
+      className="animate-delay-700 animate-fade-up space-y-4 pb-4"
+      id="experience"
+    >
+      <div>
         <h2 className="font-semibold text-2xl md:text-3xl">Experience</h2>
         <p className="text-sm/8">
           I like to create something powerful, simple, and clean.

@@ -7,9 +7,7 @@ import Link from 'next/link';
 export const FeaturedProjects = () => {
   return (
     <section className="space-y-4">
-      <h2 className="font-extrabold text-2xl text-primary">
-        Featured Projects
-      </h2>
+      <h2 className="font-semibold text-2xl md:text-3xl">Featured Projects</h2>
       <div className="grid gap-4 md:grid-cols-3">
         {c.featureProjects.map((p, i) => (
           <div

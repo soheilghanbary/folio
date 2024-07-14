@@ -6,7 +6,12 @@ import { motion } from 'framer-motion';
 export function Skills() {
   return (
     <div id="skills" className="space-y-4">
-      <h2 className="font-semibold text-2xl text-heading">Skills</h2>
+      <div>
+        <h2 className="font-semibold text-2xl md:text-3xl">Skills</h2>
+        <p className="text-sm/8">
+          My specialty is solving problems, and my toolbox includes:
+        </p>
+      </div>
       <section className="flex flex-wrap gap-4">
         <SkillList title="FrontEnd" items={skills.frontend} />
         <SkillList title="Backend" items={skills.backend} />
