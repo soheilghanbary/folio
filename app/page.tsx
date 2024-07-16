@@ -22,6 +22,7 @@ export default function HomePage() {
       <AboutMe />
       <ExperienceSection />
       <DockDemo />
+      <RocketNow />
     </section>
   );
 }
