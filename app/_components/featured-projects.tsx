@@ -1,42 +1,54 @@
-import { buttonVariants } from '@/components/ui/button';
-import c from '@/config/site.json';
-import { cn } from '@/lib/utils';
-import { GithubIcon } from 'lucide-react';
-import Link from 'next/link';
+'use client';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 export const FeaturedProjects = () => {
   return (
-    <section className="space-y-4">
-      <h2 className="font-semibold text-2xl md:text-3xl">Featured Projects</h2>
-      <div className="grid gap-4 md:grid-cols-3">
-        {c.featureProjects.map((p, i) => (
-          <div
-            key={p.name}
-            className={cn(
-              'group flex cursor-pointer flex-col justify-between rounded-xl border p-4 shadow-sm',
-              i === 3 && 'md:col-span-2',
-            )}
+    <section id="projects" className="scroll-m-20 space-y-4">
+      <motion.h2
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, type: 'spring' }}
+        className="font-semibold text-2xl md:text-3xl"
+      >
+        Featured Projects
+      </motion.h2>
+      <section className="grid grid-cols-3 gap-4">
+        {Array.from({ length: 6 }).map((_, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
           >
-            <div className="transition-all md:group-hover:pl-2">
-              <h2 className="font-bold text-base/8">{p.name}</h2>
-              <p className="text-muted-foreground text-sm/6">{p.description}</p>
+            <div className="space-y-2 rounded-xl border border-border/50 p-4 shadow-sm duration-200">
+              <img
+                className="rounded-lg"
+                src="https://cdn.dribbble.com/userupload/3491358/file/original-2c34eb4548cfc04a460b03d2e208603d.png?compress=1&resize=1600x1200"
+                alt=""
+              />
+              <div className="grid gap-2">
+                <h2 className="font-medium">WebKade</h2>
+                <p className="text-muted-foreground text-xs">30 Agust 2024</p>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <Badge variant={'secondary'}>React.JS</Badge>
+                  <Badge variant={'secondary'}>TailwindCSS</Badge>
+                  <Badge variant={'secondary'}>Next.JS</Badge>
+                </div>
+                <div className="mt-4 grid grid-cols-2 gap-4">
+                  <Button size={'sm'} variant={'outline'}>
+                    Live Preview
+                  </Button>
+                  <Button size={'sm'} variant={'outline'}>
+                    Source
+                  </Button>
+                </div>
+              </div>
             </div>
-            <Link
-              href={p.url}
-              className={cn(
-                buttonVariants({
-                  variant: 'outline',
-                  fullRounded: true,
-                }),
-                'mt-2.5 w-fit',
-              )}
-            >
-              <GithubIcon className="mr-2 size-4" />
-              Source code
-            </Link>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </section>
     </section>
   );
 };

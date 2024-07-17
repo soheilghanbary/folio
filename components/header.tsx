@@ -28,22 +28,22 @@ const Logo = () => (
 );
 
 const Navbar = () => (
-  <ul className="hidden flex-1 items-center justify-center">
-    <NavItem href="/" label="Home" />
-    <NavItem href="/projects" label="Projects" />
-    <NavItem href="/skills" label="Skills" />
-    <NavItem href="/about" label="About" />
+  <ul className="flex flex-1 items-center">
+    <NavItem href="#" label="Home" />
+    <NavItem href="#projects" label="Projects" />
+    <NavItem href="#skills" label="Skills" />
+    <NavItem href="#about" label="About" />
   </ul>
 );
 
 const NavItem = ({ href, label }: NavItemProps) => (
   <li>
-    <Link
+    <a
       href={href}
-      className="rounded-full px-4 py-2 font-medium text-muted-foreground text-sm duration-150 hover:bg-muted hover:text-foreground"
+      className="rounded-md px-4 py-2 font-medium text-muted-foreground text-sm duration-150 hover:bg-muted hover:text-foreground"
     >
       {label}
-    </Link>
+    </a>
   </li>
 );
 

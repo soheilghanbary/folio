@@ -6,7 +6,6 @@ import {
   PhoneIcon,
   TwitterIcon,
 } from 'lucide-react';
-import { DockDemo } from './_components/dock';
 import { ExperienceSection } from './_components/experience-section';
 import { FeaturedProjects } from './_components/featured-projects';
 import { GlobeSection } from './_components/globe';
@@ -21,7 +20,6 @@ export default function HomePage() {
       <Skills />
       <AboutMe />
       <ExperienceSection />
-      <DockDemo />
       <RocketNow />
     </section>
   );
@@ -29,7 +27,7 @@ export default function HomePage() {
 
 const AboutMe = () => {
   return (
-    <section className="space-y-8">
+    <section id="about" className="scroll-m-20 space-y-8">
       <h2 className="font-semibold text-2xl md:text-3xl">About Me</h2>
       <div className="grid gap-4 md:grid-cols-2">
         <GlobeSection />
