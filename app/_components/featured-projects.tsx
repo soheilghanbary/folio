@@ -14,7 +14,7 @@ export const FeaturedProjects = () => {
       >
         Featured Projects
       </motion.h2>
-      <section className="grid grid-cols-3 gap-4">
+      <section className="grid gap-4 md:grid-cols-3">
         {Array.from({ length: 6 }).map((_, index) => (
           <motion.div
             key={index}
