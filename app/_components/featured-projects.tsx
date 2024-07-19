@@ -1,6 +1,7 @@
 'use client';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { projects } from '@/config/projects';
 import { motion } from 'framer-motion';
 
 export const FeaturedProjects = () => {
@@ -15,7 +16,7 @@ export const FeaturedProjects = () => {
         Featured Projects
       </motion.h2>
       <section className="grid gap-4 md:grid-cols-3">
-        {Array.from({ length: 6 }).map((_, index) => (
+        {projects.map((p, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
@@ -23,13 +24,16 @@ export const FeaturedProjects = () => {
             transition={{ delay: index * 0.1, duration: 0.5 }}
           >
             <div className="space-y-2 rounded-xl border border-border/50 p-4 shadow-sm duration-200">
-              <img
+              {/* <img
                 className="rounded-lg"
                 src="https://cdn.dribbble.com/userupload/3491358/file/original-2c34eb4548cfc04a460b03d2e208603d.png?compress=1&resize=1600x1200"
                 alt=""
-              />
+              /> */}
               <div className="grid gap-2">
-                <h2 className="font-medium">WebKade</h2>
+                <h2 className="font-bold">{p.name}</h2>
+                <p className="text-muted-foreground text-sm/6">
+                  {p.description}
+                </p>
                 <p className="text-muted-foreground text-xs">30 Agust 2024</p>
                 <div className="flex flex-wrap items-center gap-1.5">
                   <Badge variant={'secondary'}>React.JS</Badge>
@@ -37,12 +41,28 @@ export const FeaturedProjects = () => {
                   <Badge variant={'secondary'}>Next.JS</Badge>
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-4">
-                  <Button size={'sm'} variant={'outline'}>
+                  <a
+                    target="_blank"
+                    href={p.link}
+                    rel="noreferrer"
+                    className={buttonVariants({
+                      size: 'sm',
+                      variant: 'outline',
+                    })}
+                  >
                     Live Preview
-                  </Button>
-                  <Button size={'sm'} variant={'outline'}>
+                  </a>
+                  <a
+                    target="_blank"
+                    href={p.source}
+                    rel="noreferrer"
+                    className={buttonVariants({
+                      size: 'sm',
+                      variant: 'default',
+                    })}
+                  >
                     Source
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>
