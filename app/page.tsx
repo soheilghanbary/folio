@@ -11,6 +11,7 @@ import { FeaturedProjects } from './_components/featured-projects';
 import { GlobeSection } from './_components/globe';
 import { Hero } from './_components/hero';
 import { Skills } from './_components/skills';
+import { BackToTop } from '@/components/back-to-top';
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
       <AboutMe />
       <ExperienceSection />
       <RocketNow />
+      <BackToTop />
     </section>
   );
 }
