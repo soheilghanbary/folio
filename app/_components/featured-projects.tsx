@@ -15,7 +15,7 @@ export const FeaturedProjects = () => {
       >
         Featured Projects
       </motion.h2>
-      <section className="grid gap-4 md:grid-cols-3">
+      <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, index) => (
           <motion.div
             key={index}
@@ -58,7 +58,7 @@ export const FeaturedProjects = () => {
                     rel="noreferrer"
                     className={buttonVariants({
                       size: 'sm',
-                      variant: 'default',
+                      variant: 'blue',
                     })}
                   >
                     Source

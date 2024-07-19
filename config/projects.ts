@@ -17,4 +17,10 @@ export const projects = [
     source: "https://github.com/soheilghanbary/tony-todo",
     link: "https://tony-todo.vercel.app",
   },
+  {
+    name: "Portfolio",
+    description: "a Personal Portfolio built by modern tech",
+    source: "https://github.com/soheilghanbary/folio",
+    link: "https://folio-steel.vercel.app/",
+  },
 ];
