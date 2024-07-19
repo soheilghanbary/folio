@@ -12,6 +12,12 @@ export const projects = [
     link: "https://cartino.vercel.app",
   },
   {
+    name: "Postino",
+    description: "The Modern Social Network",
+    source: "https://github.com/soheilghanbary/postino",
+    link: "https://postino.vercel.app",
+  },
+  {
     name: "Moovito",
     description: "a movie preview app with TMDB & Next.js",
     source: "https://github.com/soheilghanbary/moovito",
