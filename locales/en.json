@@ -8,5 +8,8 @@
   },
   "projects": {
     "title": "My Projects"
+  },
+  "about": {
+    "title": "Connection Me"
   }
 }

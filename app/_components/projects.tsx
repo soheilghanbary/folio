@@ -14,7 +14,7 @@ const projects = [
   {
     name: 'نوین بوستر (Novin Booster)',
     description: 'تولید کننده تجهیزات مخابراتی و رادیویی',
-    title: 'WordPress Developer',
+    title: 'WordPress Work',
     link: 'https://myrepeater.ir',
   },
   {
@@ -74,7 +74,12 @@ export function Projects() {
         {t('title')}
       </motion.h2>
       <ProjectList />
-      <Button asChild fullRounded className="mx-auto w-fit gap-2">
+      <Button
+        asChild
+        fullRounded
+        variant={'blue'}
+        className="mx-auto w-fit gap-2"
+      >
         <a href={'https://github.com/soheilghanbary'}>
           <GithubIcon className="size-4" />
           مشاهده بیشتر
@@ -101,7 +106,7 @@ const ProjectItem = ({
   link,
 }: (typeof projects)[0]) => (
   <div className="grid gap-2.5">
-    <div className="flex h-64 w-full items-center justify-center rounded-lg bg-muted">
+    <div className="flex h-64 w-full items-center justify-center rounded-lg bg-muted dark:bg-muted/40">
       <ImageIcon className="size-8" />
     </div>
     <h2 className="font-bold">{name}</h2>
