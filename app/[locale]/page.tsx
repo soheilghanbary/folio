@@ -7,19 +7,20 @@ import {
   PhoneIcon,
   TwitterIcon,
 } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 import { ExperienceSection } from '../_components/experience-section';
 import { FeaturedProjects } from '../_components/featured-projects';
 import { GlobeSection } from '../_components/globe';
 import { Hero } from '../_components/hero';
+import { Projects } from '../_components/projects';
 import { Skills } from '../_components/skills';
 
 export default function HomePage() {
   return (
     <section className="space-y-10">
       <Hero />
-      <FeaturedProjects />
       <Skills />
+      <Projects />
+      <FeaturedProjects />
       <AboutMe />
       <ExperienceSection />
       <RocketNow />
