@@ -1,3 +1,4 @@
+import { BackToTop } from '@/components/back-to-top';
 import NumberTicker from '@/components/magicui/number-ticker';
 import {
   GithubIcon,
@@ -6,12 +7,12 @@ import {
   PhoneIcon,
   TwitterIcon,
 } from 'lucide-react';
-import { ExperienceSection } from './_components/experience-section';
-import { FeaturedProjects } from './_components/featured-projects';
-import { GlobeSection } from './_components/globe';
-import { Hero } from './_components/hero';
-import { Skills } from './_components/skills';
-import { BackToTop } from '@/components/back-to-top';
+import { useTranslations } from 'next-intl';
+import { ExperienceSection } from '../_components/experience-section';
+import { FeaturedProjects } from '../_components/featured-projects';
+import { GlobeSection } from '../_components/globe';
+import { Hero } from '../_components/hero';
+import { Skills } from '../_components/skills';
 
 export default function HomePage() {
   return (

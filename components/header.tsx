@@ -1,7 +1,49 @@
-import { FlameIcon, GithubIcon, TwitterIcon } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { GithubIcon, Languages, PalmtreeIcon, TwitterIcon } from 'lucide-react';
 import Link from 'next/link';
+import { IranFlag, UnitedKingdomFlag } from './icons/flags';
 import { ModeToggle } from './mode-toggle';
 import { Button } from './ui/button';
+
+const Logo = () => (
+  <Link href={'/'} className="flex items-center gap-2 text-primary">
+    <PalmtreeIcon className="size-6" />
+    <h6 className="font-black text-lg/6">Soheil</h6>
+  </Link>
+);
+
+const SelectLang = () => {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button size={'icon'} variant={'ghost'}>
+          <Languages className="size-4" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem asChild>
+          <Link href={'/fa'}>
+            <IranFlag className="mr-2 size-4" />
+            Persian
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem asChild>
+          <Link href={'/en'}>
+            <UnitedKingdomFlag className="mr-2 size-4" />
+            English
+          </Link>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
 
 type NavItemProps = {
   href: string;
@@ -10,22 +52,14 @@ type NavItemProps = {
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border border-border/40 bg-background/95 p-2 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-border/40 border-b bg-background/95 p-2 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex items-center justify-between gap-4">
         <Logo />
-        <Navbar />
         <NavLinks />
       </nav>
     </header>
   );
 }
-
-const Logo = () => (
-  <Link href={'/'} className="flex items-center gap-1 text-primary">
-    <FlameIcon className="size-5" />
-    <h6 className="font-extrabold text-lg/6">Soheil Ghanbary</h6>
-  </Link>
-);
 
 const Navbar = () => (
   <ul className="hidden flex-1 items-center justify-center md:flex">
@@ -50,6 +84,8 @@ const NavItem = ({ href, label }: NavItemProps) => (
 const NavLinks = () => {
   return (
     <div className="flex items-center gap-2">
+      <SelectLang />
+      <ModeToggle />
       <Button asChild size={'icon'} variant={'link'}>
         <a
           target="_blank"
@@ -64,7 +100,6 @@ const NavLinks = () => {
           <TwitterIcon className="size-5" />
         </a>
       </Button>
-      <ModeToggle />
     </div>
   );
 };
