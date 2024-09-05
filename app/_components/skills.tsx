@@ -28,14 +28,14 @@ export const Skills = () => {
 };
 
 export const SkillList = ({ items }: { items: SkillProps[] }) => (
-  <ul className={'flex flex-wrap items-center gap-10'}>
+  <ul className={'flex flex-wrap items-center gap-6'}>
     {items.map((item, i) => (
       <motion.li
         key={item.name}
         initial={{ opacity: 0, x: -15 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ delay: i * 0.1, duration: 0.5, type: 'spring' }}
-        className="flex items-center gap-3 text-lg"
+        className="flex items-center gap-2 text-lg"
       >
         <item.icon className="h-6 w-6" />
         <div className="flex items-center gap-2">

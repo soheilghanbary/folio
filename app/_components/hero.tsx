@@ -40,7 +40,7 @@ const HeroSubtitle = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className="text-center font-bold text-foreground text-lg"
+      className="text-center font-extrabold text-foreground text-lg"
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.5 } },
@@ -109,7 +109,7 @@ const HeroImage = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.7 }}
-    className="relative h-96 w-80 rounded-lg ring-2 ring-blue"
+    className="relative h-80 w-72 rounded-lg ring-2 ring-blue md:h-96 md:w-80"
   >
     <Image
       alt="Soheil Ghanbary"

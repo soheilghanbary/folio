@@ -68,14 +68,6 @@ const AboutConnect = () => {
             <GithubIcon className="size-5" />
           </a>
           <a
-            href="https://x.com/soheil_prog"
-            target="_blank"
-            rel="noreferrer"
-            className={buttonVariants({ size: 'icon', variant: 'ghost' })}
-          >
-            <TwitterIcon className="size-5" />
-          </a>
-          <a
             href="https://www.linkedin.com/in/soheilghanbary/"
             target="_blank"
             rel="noreferrer"

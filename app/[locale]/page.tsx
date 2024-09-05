@@ -11,7 +11,6 @@ export default function HomePage() {
       <Skills />
       <Projects />
       <AboutMe />
-      {/* <ExperienceSection /> */}
       <BackToTop />
     </section>
   );
