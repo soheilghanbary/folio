@@ -40,7 +40,7 @@ const HeroSubtitle = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className="text-center font-bold text-lg text-muted-foreground"
+      className="text-center font-bold text-lg"
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.5 } },
@@ -116,7 +116,7 @@ export const Hero = async () => {
       >
         <HeroTitle />
         <HeroSubtitle />
-        {/* <HeroDescription /> */}
+        <HeroDescription />
         <HeroButton />
       </div>
       <HeroImage />

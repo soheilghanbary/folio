@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { GithubIcon, ImageIcon, LinkIcon } from 'lucide-react';
+import { GithubIcon, LinkIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 const projects = [
@@ -10,54 +10,72 @@ const projects = [
     description: 'وبسایت تخصصی فروش تقویت آنتن موبایل',
     title: 'SEO Engineer',
     link: 'https://myrepeater.ir',
+    image: 'https://www.karlancer.com/api/file/x/x764/1723907835-WLfa.png',
+    tags: ['SEO', 'Yoast', 'WordPress'],
   },
   {
     name: 'نوین بوستر (Novin Booster)',
     description: 'تولید کننده تجهیزات مخابراتی و رادیویی',
     title: 'WordPress Work',
     link: 'https://myrepeater.ir',
+    image: 'https://www.karlancer.com/api/file/x/x764/1723908412-BkCo.jpg',
+    tags: ['SEO', 'RankMath', 'WordPress'],
   },
   {
     name: 'وبکده (WebKade)',
     description: 'پلتفرم اشتراک گذاری وب اپلیکیشن',
-    title: 'Next.JS Developer',
+    title: 'MERN Developer',
     link: 'https://webkade.vercel.app',
+    image: 'https://www.karlancer.com/api/file/x/x352_211/1723908412-BkCo.jpg',
+    tags: ['React.JS', 'Express.Js', 'PostgreSQL'],
   },
   {
     name: 'خرجینو (Kharjino)',
     description: 'اپلیکیشن مدیریت محارج شخصی',
     title: 'Next.JS Developer',
     link: 'https://kharjino.vercel.app',
+    image: 'https://www.karlancer.com/api/file/x/x352_211/1723908412-BkCo.jpg',
+    tags: ['Next.JS', 'Prisma', 'PostgreSQL'],
   },
   {
     name: 'شاپینو (Shopino)',
     description: 'اپلیکیشن ثبت اگهی بدون محدودیت',
     title: 'Next.JS Developer',
     link: 'https://shopino.vercel.app',
+    image: 'https://www.karlancer.com/api/file/x/x352_211/1723908412-BkCo.jpg',
+    tags: ['Next.JS', 'DrizzleORM', 'PostgreSQL'],
   },
   {
     name: 'کیان استور (KianStore)',
     description: 'وب اپلیکیشن مدیریت انبارداری شرکت کیان ارتباط',
     title: 'Full Stack Developer',
     link: 'https://kianstore.vercel.app',
+    image: 'https://www.karlancer.com/api/file/x/x352_211/1723908412-BkCo.jpg',
+    tags: ['Next.JS', 'Prisma', 'MySQL', 'TypeScript'],
   },
   {
     name: 'موویتو (Moovito)',
     description: 'وب اپلیکیشن اطلاعات فیلم TMDB',
     title: 'FrontEnd Developer',
     link: 'https://moovito.vercel.app',
+    image: 'https://www.karlancer.com/api/file/x/x352_211/1723908412-BkCo.jpg',
+    tags: ['React.JS', 'TailwindCSS', 'Api'],
   },
   {
     name: 'پستینو (Postino)',
     description: 'نمونه شبکه اجتماعی نوشته با Next.JS',
     title: 'Next.JS Developer',
     link: 'https://postino.vercel.app',
+    image: 'https://www.karlancer.com/api/file/x/x352_211/1723908412-BkCo.jpg',
+    tags: ['Next.JS', 'Hono.JS', 'DrizzleORM'],
   },
   {
     name: 'جابینو (Jobino)',
     description: 'اپلیکیشن اشتراک گذاری مشاغل',
     title: 'React.JS Developer',
     link: 'https://jobino.vercel.app',
+    image: 'https://www.karlancer.com/api/file/x/x352_211/1723908660-y1Z9.jpg',
+    tags: ['Next.JS', 'Prisma', 'TypeScript'],
   },
 ];
 
@@ -91,7 +109,7 @@ export function Projects() {
 
 const ProjectList = () => {
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((p) => (
         <ProjectItem key={p.name} {...p} />
       ))}
@@ -102,17 +120,33 @@ const ProjectList = () => {
 const ProjectItem = ({
   name,
   description,
+  tags,
   title,
   link,
 }: (typeof projects)[0]) => (
-  <div className="grid gap-2.5">
-    <div className="flex h-64 w-full items-center justify-center rounded-lg bg-muted dark:bg-muted/40">
-      <ImageIcon className="size-8" />
-    </div>
+  <div className="grid gap-2.5 rounded-xl border p-4 shadow-sm">
+    {/* <div className="relative flex h-60 w-full border-separate items-center justify-center rounded-lg border border-border/40 bg-muted dark:bg-muted/40">
+      <Image
+        fill
+        src={image}
+        alt={name}
+        className="size-full rounded-[inherit] object-cover"
+      />
+    </div> */}
     <h2 className="font-bold">{name}</h2>
     <p className="text-muted-foreground text-xs">{description}</p>
+    <div className="flex flex-wrap items-center gap-2">
+      {tags.map((t) => (
+        <span
+          key={t}
+          className="border-separate rounded-md border bg-muted/40 px-2 py-0.5 font-semibold text-muted-foreground text-xs shadow"
+        >
+          {t}
+        </span>
+      ))}
+    </div>
     <hr className="border-border/40" />
-    <div className="flex items-center justify-between gap-2">
+    <div className="flex items-end justify-between gap-2">
       <Button variant={'outline'} size={'icon'}>
         <GithubIcon className="size-4" />
       </Button>

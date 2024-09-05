@@ -15,6 +15,11 @@ const nextConfig = {
         hostname: 'images.unsplash.com',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.karlancer.com',
+        port: '',
+      },
     ],
   }
 };
