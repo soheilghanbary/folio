@@ -40,7 +40,7 @@ const HeroSubtitle = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className="text-center font-extrabold text-foreground text-lg"
+      className="text-center font-bold text-lg text-muted-foreground"
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.5 } },
@@ -87,23 +87,6 @@ const HeroButton = () => {
   );
 };
 
-const HeroInfo = async () => {
-  const locale = await getLocale();
-  return (
-    <div
-      className={cn(
-        'flex max-w-lg flex-col gap-2 text-center',
-        locale === 'en' ? 'md:text-left' : 'md:text-right',
-      )}
-    >
-      <HeroTitle />
-      <HeroSubtitle />
-      <HeroDescription />
-      <HeroButton />
-    </div>
-  );
-};
-
 const HeroImage = () => (
   <MotionDiv
     initial={{ opacity: 0, y: 20 }}
@@ -121,10 +104,21 @@ const HeroImage = () => (
   </MotionDiv>
 );
 
-export const Hero = () => {
+export const Hero = async () => {
+  const locale = await getLocale();
   return (
     <section className="flex flex-col-reverse items-center justify-between gap-8 md:flex-row md:py-12">
-      <HeroInfo />
+      <div
+        className={cn(
+          'flex max-w-lg flex-col gap-2 text-center',
+          locale === 'en' ? 'md:text-left' : 'md:text-right',
+        )}
+      >
+        <HeroTitle />
+        <HeroSubtitle />
+        {/* <HeroDescription /> */}
+        <HeroButton />
+      </div>
       <HeroImage />
     </section>
   );

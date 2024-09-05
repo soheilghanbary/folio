@@ -6,7 +6,7 @@ import { Skills } from '../_components/skills';
 
 export default function HomePage() {
   return (
-    <section className="space-y-10">
+    <section className="grid gap-20">
       <Hero />
       <Skills />
       <Projects />

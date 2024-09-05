@@ -10,7 +10,6 @@ import {
   MailIcon,
   PhoneIcon,
   SendIcon,
-  TwitterIcon,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { GlobeSection } from './globe';
@@ -18,7 +17,7 @@ import { GlobeSection } from './globe';
 export const AboutMe = () => {
   const t = useTranslations('about');
   return (
-    <section className="grid gap-10 py-12">
+    <section className="grid gap-8">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

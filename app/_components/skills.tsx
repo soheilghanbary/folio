@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 export const Skills = () => {
   const t = useTranslations('skills');
   return (
-    <div className="grid gap-10 py-12">
+    <div className="grid gap-8">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

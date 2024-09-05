@@ -64,7 +64,7 @@ const projects = [
 export function Projects() {
   const t = useTranslations('projects');
   return (
-    <div className="grid gap-10 py-12">
+    <div className="grid gap-8">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
