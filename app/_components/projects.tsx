@@ -128,7 +128,7 @@ const ProjectItem = ({
   title,
   link,
 }: (typeof projects)[0]) => (
-  <div className="grid gap-2.5 rounded-xl border border-border/40 p-4 shadow-sm">
+  <div className="grid gap-2.5 rounded-xl border border-border/40 bg-card p-4 shadow-sm">
     <h2 className="font-bold">{name}</h2>
     <p className="text-muted-foreground text-xs">{description}</p>
     <div className="flex flex-wrap items-center gap-2">

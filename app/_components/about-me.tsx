@@ -37,7 +37,7 @@ export const AboutMe = () => {
 const AboutConnect = () => {
   const t = useTranslations('about');
   return (
-    <section className="space-y-6 rounded-xl border p-6 shadow-sm">
+    <section className="space-y-6 rounded-xl border bg-card p-6 shadow-sm">
       <h2 className="font-bold text-xl">{t('subtitle')}</h2>
       <p className="text-muted-foreground text-sm/6">{t('description')}</p>
       <div className="grid gap-2">
