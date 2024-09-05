@@ -10,6 +10,12 @@
     "title": "My Projects"
   },
   "about": {
-    "title": "Connection Me"
+    "title": "Connection Me",
+    "subtitle": "Let's connect and work together!",
+    "description": "I'm a full-stack web developer with a passion for creating innovative and scalable solutions. With a focus on building efficient software and seamless user experiences, I specialize in leveraging the latest technologies to deliver exceptional digital experiences.",
+    "namefield": "Full Name",
+    "emailfield": "Email",
+    "messagefield": "Message",
+    "sendbtn": "Send"
   }
 }

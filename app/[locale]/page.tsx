@@ -21,7 +21,7 @@ export default function HomePage() {
       <Skills />
       <Projects />
       <AboutMe />
-      <ExperienceSection />
+      {/* <ExperienceSection /> */}
       <RocketNow />
       <BackToTop />
     </section>
