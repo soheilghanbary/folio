@@ -123,9 +123,9 @@ const HeroImage = () => (
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col-reverse items-center justify-between gap-8 md:flex-row">
+    <section className="flex flex-col-reverse items-center justify-between gap-8 py-12 md:flex-row">
       <HeroInfo />
       <HeroImage />
-    </div>
+    </section>
   );
 };
