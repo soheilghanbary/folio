@@ -98,7 +98,11 @@ export function Projects() {
         variant={'blue'}
         className="mx-auto w-fit gap-2"
       >
-        <a href={'https://github.com/soheilghanbary'}>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={'https://github.com/soheilghanbary'}
+        >
           <GithubIcon className="size-4" />
           مشاهده بیشتر
         </a>
@@ -125,14 +129,6 @@ const ProjectItem = ({
   link,
 }: (typeof projects)[0]) => (
   <div className="grid gap-2.5 rounded-xl border p-4 shadow-sm">
-    {/* <div className="relative flex h-60 w-full border-separate items-center justify-center rounded-lg border border-border/40 bg-muted dark:bg-muted/40">
-      <Image
-        fill
-        src={image}
-        alt={name}
-        className="size-full rounded-[inherit] object-cover"
-      />
-    </div> */}
     <h2 className="font-bold">{name}</h2>
     <p className="text-muted-foreground text-xs">{description}</p>
     <div className="flex flex-wrap items-center gap-2">
