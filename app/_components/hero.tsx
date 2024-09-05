@@ -123,7 +123,7 @@ const HeroImage = () => (
 
 export const Hero = () => {
   return (
-    <section className="flex flex-col-reverse items-center justify-between gap-8 py-12 md:flex-row">
+    <section className="flex flex-col-reverse items-center justify-between gap-8 md:flex-row md:py-12">
       <HeroInfo />
       <HeroImage />
     </section>

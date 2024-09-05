@@ -52,7 +52,7 @@ type NavItemProps = {
 
 export function SiteHeader() {
   return (
-    <header className="w-full border-border/40 border-b bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="w-full border-border/40 border-b bg-background/95 px-4 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:p-4">
       <nav className="container flex items-center justify-between gap-4">
         <Logo />
         <NavLinks />
