@@ -128,7 +128,7 @@ const ProjectItem = ({
   title,
   link,
 }: (typeof projects)[0]) => (
-  <div className="grid gap-2.5 rounded-xl border p-4 shadow-sm">
+  <div className="grid gap-2.5 rounded-xl border border-border/40 p-4 shadow-sm">
     <h2 className="font-bold">{name}</h2>
     <p className="text-muted-foreground text-xs">{description}</p>
     <div className="flex flex-wrap items-center gap-2">
@@ -142,7 +142,7 @@ const ProjectItem = ({
       ))}
     </div>
     <hr className="border-border/40" />
-    <div className="flex items-end justify-between gap-2">
+    <div dir="rtl" className="flex items-center justify-between gap-2">
       <Button variant={'outline'} size={'icon'}>
         <GithubIcon className="size-4" />
       </Button>
