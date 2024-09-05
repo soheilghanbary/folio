@@ -54,7 +54,7 @@ const HeroDescription = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className="text-balance text-muted-foreground text-sm/6"
+      className="text-balance text-muted-foreground text-sm/7"
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.7 } },
@@ -77,7 +77,7 @@ const HeroButton = () => {
         download={true}
         className={cn(
           buttonVariants({ variant: 'default', fullRounded: true }),
-          'gap-2',
+          'mt-2 gap-2',
         )}
       >
         <DownloadIcon className="size-4" />
@@ -92,7 +92,7 @@ const HeroInfo = async () => {
   return (
     <div
       className={cn(
-        'flex max-w-lg flex-col gap-4 text-center',
+        'flex max-w-lg flex-col gap-2 text-center',
         locale === 'en' ? 'md:text-left' : 'md:text-right',
       )}
     >
@@ -109,7 +109,7 @@ const HeroImage = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.7 }}
-    className="relative h-80 w-72 rounded-lg ring-2 ring-blue md:h-96 md:w-80"
+    className="relative h-80 w-72 rounded-lg ring-2 ring-primary/20 md:h-96 md:w-80"
   >
     <Image
       alt="Soheil Ghanbary"
