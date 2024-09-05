@@ -45,11 +45,6 @@ const SelectLang = () => {
   );
 };
 
-type NavItemProps = {
-  href: string;
-  label: string;
-};
-
 export function SiteHeader() {
   return (
     <header className="w-full border-border/40 border-b bg-background/95 px-4 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:p-4">
@@ -60,26 +55,6 @@ export function SiteHeader() {
     </header>
   );
 }
-
-const Navbar = () => (
-  <ul className="hidden flex-1 items-center justify-center md:flex">
-    <NavItem href="#" label="Home" />
-    <NavItem href="#projects" label="Projects" />
-    <NavItem href="#skills" label="Skills" />
-    <NavItem href="#about" label="About" />
-  </ul>
-);
-
-const NavItem = ({ href, label }: NavItemProps) => (
-  <li>
-    <a
-      href={href}
-      className="rounded-md px-4 py-2 font-medium text-muted-foreground text-sm duration-150 hover:bg-muted hover:text-foreground"
-    >
-      {label}
-    </a>
-  </li>
-);
 
 const NavLinks = () => {
   return (
