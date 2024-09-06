@@ -41,7 +41,7 @@ export function Projects() {
           href={'https://github.com/soheilghanbary'}
         >
           <GithubIcon className="size-4" />
-          مشاهده بیشتر
+          {t('morebtn')}
         </a>
       </Button>
     </div>

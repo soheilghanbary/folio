@@ -7,7 +7,8 @@
     "title": "My Skills"
   },
   "projects": {
-    "title": "My Projects"
+    "title": "My Projects",
+    "morebtn": "More Projects"
   },
   "about": {
     "title": "Connection Me",
@@ -17,5 +18,8 @@
     "emailfield": "Email",
     "messagefield": "Message",
     "sendbtn": "Send"
+  },
+  "footer": {
+    "description": "Soheil a professional web developer, specialize in building websites and web applications."
   }
 }

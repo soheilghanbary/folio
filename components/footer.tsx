@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 const Signature = () => (
@@ -5,12 +6,12 @@ const Signature = () => (
 );
 
 export function SiteFooter() {
+  const t = useTranslations('footer');
   return (
     <footer className="border-border/50 border-t">
-      <section className="container mx-auto flex flex-col items-center justify-center space-y-4 p-4">
-        <p className="max-w-sm text-balance text-center text-foreground text-sm/6 tracking-wider">
-          Soheil a professional web developer, specialize in building websites
-          and web applications.
+      <section className="container mx-auto flex flex-col-reverse items-center justify-between gap-4 p-4 md:flex-row">
+        <p className="text-balance text-center text-foreground text-sm/6">
+          {t('description')}
         </p>
         <Signature />
       </section>
