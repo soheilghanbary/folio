@@ -92,11 +92,11 @@ const HeroImage = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.7 }}
-    className="relative h-80 w-72 rounded-lg ring-2 ring-primary/20 md:h-96 md:w-80"
+    className="relative h-80 w-72 rounded-lg ring-2 ring-blue md:h-96 md:w-80"
   >
     <Image
       alt="Soheil Ghanbary"
-      src={'/profile.jpeg'}
+      src={'/profile.jpg'}
       fill
       draggable="false"
       className="size-full scale-[.97] rounded-[inherit] object-cover"

@@ -81,6 +81,7 @@ const projects = [
 
 export function Projects() {
   const t = useTranslations('projects');
+
   return (
     <div className="grid gap-8">
       <motion.h2
@@ -91,7 +92,11 @@ export function Projects() {
       >
         {t('title')}
       </motion.h2>
-      <ProjectList />
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((p) => (
+          <ProjectItem key={p.name} {...p} />
+        ))}
+      </div>
       <Button
         asChild
         fullRounded
@@ -110,16 +115,6 @@ export function Projects() {
     </div>
   );
 }
-
-const ProjectList = () => {
-  return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {projects.map((p) => (
-        <ProjectItem key={p.name} {...p} />
-      ))}
-    </div>
-  );
-};
 
 const ProjectItem = ({
   name,

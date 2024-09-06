@@ -30,7 +30,11 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === 'en' ? 'ltr' : 'rtl'}>
+    <html
+      lang={locale}
+      dir={locale === 'en' ? 'ltr' : 'rtl'}
+      suppressHydrationWarning
+    >
       <body className={locale === 'en' ? font.className : irsans.className}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
