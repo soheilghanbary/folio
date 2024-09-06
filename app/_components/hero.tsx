@@ -98,6 +98,7 @@ const HeroImage = () => (
       alt="Soheil Ghanbary"
       src={'/profile.jpg'}
       fill
+      sizes="100vh"
       draggable="false"
       className="size-full scale-[.97] rounded-[inherit] object-cover"
     />

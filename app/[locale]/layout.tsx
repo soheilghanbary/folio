@@ -17,6 +17,14 @@ const font = Inter({
 export const metadata: Metadata = {
   title: 'Soheil Ghanbary | سهیل قنبری',
   description: 'Full Stack Web Developer',
+  openGraph: {
+    title: 'Soheil Ghanbary | سهیل قنبری',
+    description: 'Full Stack Web Developer',
+  },
+  twitter: {
+    title: 'Soheil Ghanbary | سهیل قنبری',
+    description: 'Full Stack Web Developer',
+  },
 };
 
 export default async function RootLayout({
@@ -35,14 +43,13 @@ export default async function RootLayout({
       dir={locale === 'en' ? 'ltr' : 'rtl'}
       suppressHydrationWarning
     >
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={locale === 'en' ? font.className : irsans.className}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <SiteHeader />
             <main className="container mx-auto p-4">{children}</main>
             <SiteFooter />
