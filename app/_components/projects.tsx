@@ -13,7 +13,7 @@ export function Projects() {
     <div className="grid gap-8">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, type: 'spring', delay: 0.3 }}
         className="text-center font-black text-2xl"
       >
@@ -56,7 +56,9 @@ const ProjectItem = ({
   link,
 }: (typeof projects)[0]) => (
   <div className="grid gap-2.5 rounded-xl border border-border/40 bg-card p-4 shadow-sm">
-    <h2 className="font-bold">{name}</h2>
+    <a href={link} target="_blank" rel="noreferrer">
+      <h2 className="font-bold">{name}</h2>
+    </a>
     <p className="text-muted-foreground text-xs">{description}</p>
     <div className="flex flex-wrap items-center gap-2">
       {tags.map((t) => (

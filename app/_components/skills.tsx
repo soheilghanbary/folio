@@ -9,7 +9,7 @@ export const Skills = () => {
     <div className="grid gap-8">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, type: 'spring', delay: 0.5 }}
         className="text-center font-black text-2xl"
       >
@@ -33,7 +33,7 @@ export const SkillList = ({ items }: { items: SkillProps[] }) => (
       <motion.li
         key={item.name}
         initial={{ opacity: 0, x: -15 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ delay: i * 0.1, duration: 0.5, type: 'spring' }}
         className="flex items-center gap-2 text-lg"
       >

@@ -20,7 +20,7 @@ export const AboutMe = () => {
     <section className="grid gap-8">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, type: 'spring', delay: 0.3 }}
         className="text-center font-black text-2xl"
       >

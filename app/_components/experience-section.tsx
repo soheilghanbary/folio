@@ -28,7 +28,7 @@ function ExperienceList(props: React.ComponentPropsWithoutRef<'div'>) {
         <Card key={experience.company} className="w-full">
           <MotionDiv
             initial={{ opacity: 0, y: -50 }}
-            whileInView={{
+            animate={{
               opacity: 1,
               y: 0,
               transition: { duration: 0.4 },
@@ -44,7 +44,7 @@ function ExperienceList(props: React.ComponentPropsWithoutRef<'div'>) {
           <Card.Content className="flex flex-col gap-4">
             <MotionDiv
               initial={{ opacity: 0, x: -50 }}
-              whileInView={{
+              animate={{
                 opacity: 1,
                 x: 0,
                 transition: { duration: 0.4 },
@@ -58,7 +58,7 @@ function ExperienceList(props: React.ComponentPropsWithoutRef<'div'>) {
                   <MotionDiv
                     key={skill}
                     initial={{ opacity: 0, y: 30 }}
-                    whileInView={{
+                    animate={{
                       opacity: 1,
                       y: 0,
                       transition: { duration: 0.1, delay: index / 40 },
