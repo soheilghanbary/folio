@@ -15,7 +15,7 @@ export const projects = [
     description: 'Manufacturer of telecommunications and radio equipment',
     descriptionFa: 'تولید کننده تجهیزات مخابراتی و رادیویی',
     title: 'WordPress Work',
-    link: 'https://myrepeater.ir',
+    link: 'https://novinbooster.ir',
     image: 'https://www.karlancer.com/api/file/x/x764/1723908412-BkCo.jpg',
     tags: ['SEO', 'RankMath', 'WordPress'],
   },
