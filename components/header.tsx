@@ -14,7 +14,7 @@ import { Button } from './ui/button';
 const Logo = () => (
   <Link href={'/'} className="flex items-center gap-2 text-primary">
     <PalmtreeIcon className="size-6" />
-    <h6 className="font-black text-lg/6">Soheil</h6>
+    <h6 className="font-black text-lg/6">SOHEIL</h6>
   </Link>
 );
 
