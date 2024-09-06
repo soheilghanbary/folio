@@ -95,11 +95,12 @@ const HeroImage = () => (
     className="relative h-80 w-72 rounded-lg ring-2 ring-blue md:h-96 md:w-80"
   >
     <Image
-      alt="Soheil Ghanbary"
-      src={'/profile.jpg'}
       fill
-      sizes="100vh"
+      alt="Soheil Ghanbary"
+      src={'/profile.webp'}
+      sizes="320px"
       draggable="false"
+      quality={100}
       className="size-full scale-[.97] rounded-[inherit] object-cover"
     />
   </MotionDiv>
