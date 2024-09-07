@@ -54,7 +54,7 @@ const HeroDescription = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className="text-balance text-muted-foreground text-sm/7"
+      className="text-balance text-foreground/80 text-sm/7"
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.7 } },

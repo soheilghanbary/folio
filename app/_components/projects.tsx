@@ -59,7 +59,7 @@ const ProjectItem = ({
     <a href={link} target="_blank" rel="noreferrer">
       <h2 className="font-bold">{name}</h2>
     </a>
-    <p className="text-muted-foreground text-xs">{description}</p>
+    <p className="text-foreground/80 text-xs">{description}</p>
     <div className="flex flex-wrap items-center gap-2">
       {tags.map((t) => (
         <span

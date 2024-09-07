@@ -8,7 +8,7 @@ const Signature = () => (
 export function SiteFooter() {
   const t = useTranslations('footer');
   return (
-    <footer className="border-border/50 border-t">
+    <footer className="border-border/50 border-t bg-card dark:bg-background">
       <section className="container mx-auto flex flex-col-reverse items-center justify-between gap-4 p-4 md:flex-row">
         <p className="text-balance text-center text-foreground text-sm/6">
           {t('description')}
