@@ -92,7 +92,7 @@ const HeroImage = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.7 }}
-    className="relative h-80 w-72 rounded-lg ring-2 ring-blue md:h-96 md:w-80"
+    className="relative h-80 w-72 rounded-lg md:h-96 md:w-80"
   >
     <Image
       fill
@@ -101,7 +101,7 @@ const HeroImage = () => (
       sizes="320px"
       draggable="false"
       quality={100}
-      className="size-full scale-[.97] rounded-[inherit] object-cover"
+      className="size-full rounded-[inherit] object-cover"
     />
   </MotionDiv>
 );
