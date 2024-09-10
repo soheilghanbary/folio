@@ -1,4 +1,3 @@
-import { Avatar } from '@/components/avatar';
 import { MotionDiv } from '@/components/framer-motion';
 import { FadeText } from '@/components/magicui/fade-text';
 import ShimmerButton from '@/components/magicui/shimmer-button';
@@ -7,6 +6,7 @@ import { cn } from '@/lib/utils';
 import { DownloadIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { getLocale } from 'next-intl/server';
+import Image from 'next/image';
 
 const AvalibleWork = () => (
   <MotionDiv initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -94,7 +94,15 @@ const HeroImage = () => (
     transition={{ delay: 0.7 }}
     className="relative h-80 w-72 rounded-lg md:h-96 md:w-80"
   >
-    <Avatar />
+    <Image
+      fill
+      alt="Soheil Ghanbary"
+      src={'/profile.webp'}
+      sizes="320px"
+      draggable="false"
+      quality={100}
+      className={'size-full rounded-[inherit] object-cover duration-300'}
+    />
   </MotionDiv>
 );
 
