@@ -46,7 +46,8 @@
         "useExhaustiveDependencies": "off"
       },
       "a11y": {
-        "noSvgWithoutTitle": "off"
+        "noSvgWithoutTitle": "off",
+        "useButtonType": "off"
       }
     }
   }

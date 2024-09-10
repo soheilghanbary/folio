@@ -3,7 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -21,9 +21,9 @@ const nextConfig = {
         port: '',
       },
     ],
-  }
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();
 
-export default withNextIntl(nextConfig);  
+export default withNextIntl(nextConfig);

@@ -1,3 +1,4 @@
+import { Avatar } from '@/components/avatar';
 import { MotionDiv } from '@/components/framer-motion';
 import { FadeText } from '@/components/magicui/fade-text';
 import ShimmerButton from '@/components/magicui/shimmer-button';
@@ -6,7 +7,6 @@ import { cn } from '@/lib/utils';
 import { DownloadIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { getLocale } from 'next-intl/server';
-import Image from 'next/image';
 
 const AvalibleWork = () => (
   <MotionDiv initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -15,7 +15,7 @@ const AvalibleWork = () => (
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
         <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500" />
       </span>
-      <span className="ml-2 whitespace-pre-wrap text-center font-medium text-foreground text-xs leading-none tracking-tight dark:from-white dark:to-slate-900/10">
+      <span className='ml-2 whitespace-pre-wrap text-center font-medium text-foreground text-xs leading-none tracking-tight dark:from-white dark:to-slate-900/10'>
         Available for work
       </span>
     </ShimmerButton>
@@ -26,7 +26,7 @@ const HeroTitle = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className="font-black text-2xl text-primary md:text-4xl"
+      className='font-black text-2xl text-primary md:text-4xl'
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.3 } },
@@ -40,7 +40,7 @@ const HeroSubtitle = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className="text-center font-bold text-lg"
+      className='text-center font-bold text-lg'
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.5 } },
@@ -94,15 +94,7 @@ const HeroImage = () => (
     transition={{ delay: 0.7 }}
     className="relative h-80 w-72 rounded-lg md:h-96 md:w-80"
   >
-    <Image
-      fill
-      alt="Soheil Ghanbary"
-      src={'/profile.webp'}
-      sizes="320px"
-      draggable="false"
-      quality={100}
-      className="size-full rounded-[inherit] object-cover"
-    />
+    <Avatar />
   </MotionDiv>
 );
 
