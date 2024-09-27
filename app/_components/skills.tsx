@@ -28,7 +28,7 @@ export const Skills = () => {
 };
 
 export const SkillList = ({ items }: { items: SkillProps[] }) => (
-  <ul className={'flex flex-wrap items-center gap-6'}>
+  <ul className={'flex flex-wrap items-center gap-8'}>
     {items.map((item, i) => (
       <motion.li
         key={item.name}

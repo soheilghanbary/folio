@@ -67,10 +67,10 @@ const ProjectItem = ({
     </div>
     <hr className="border-border/40" />
     <div dir="rtl" className="flex items-center justify-between gap-2">
-      <Button variant={'outline'} size={'icon'}>
+      <Button variant={'ghost'} size={'icon'}>
         <GithubIcon className="size-4" />
       </Button>
-      <Button asChild variant={'outline'} size={'icon'}>
+      <Button asChild variant={'ghost'} size={'icon'}>
         <a href={link} target="_blank" rel="noreferrer">
           <LinkIcon className="size-4" />
         </a>
