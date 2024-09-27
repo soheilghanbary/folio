@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { IranFlag, UnitedKingdomFlag } from './icons/flags';
 import { ModeToggle } from './mode-toggle';
 import { Button } from './ui/button';
+import { SelectLang } from './select-lang';
 
 const Logo = () => (
   <Link href={'/'} className="flex items-center gap-2 text-primary">
@@ -17,33 +18,6 @@ const Logo = () => (
     <h6 className="font-black text-lg/6">SOHEIL</h6>
   </Link>
 );
-
-const SelectLang = () => {
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button size={'icon'} variant={'ghost'}>
-          <Languages className="size-[1.2rem]" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuItem asChild>
-          <Link href={'/fa'}>
-            <IranFlag className="mr-2 size-4" />
-            Persian
-          </Link>
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem asChild>
-          <Link href={'/en'}>
-            <UnitedKingdomFlag className="mr-2 size-4" />
-            English
-          </Link>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-};
 
 export function SiteHeader() {
   return (
