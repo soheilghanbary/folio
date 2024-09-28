@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Language {
+  en
+  fa
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  isAdmin   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  posts     Post[]
+}
+
+model Category {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  lang      Language
+  posts     Post[]
+  published DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id         String        @id @default(uuid())
+  image      String
+  user       User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId     String
+  published  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+  category   Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId String
+  lang       Language
+  contents   PostContent[]
+}
+
+model PostContent {
+  lang    Language
+  postId  String
+  body    String
+  title   String
+  excerpt String
+  post    Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@id([lang, postId])
+}
