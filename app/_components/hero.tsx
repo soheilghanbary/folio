@@ -92,16 +92,16 @@ const HeroImage = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.7 }}
-    className="relative size-80 rounded-full ring-4 ring-primary/10 ring-offset-4 ring-offset-background"
+    className="relative size-56 rounded-full ring-4 ring-primary/10 ring-offset-4 ring-offset-background md:size-80"
   >
     <Image
       fill
-      sizes="320px"
+      sizes="260px"
       quality={100}
-      className={'size-full rounded-[inherit] object-cover duration-300'}
       draggable="false"
-      alt="Soheil Ghanbary | سهیل قنبری"
       src={'/soheil-ghanbary.webp'}
+      alt="Soheil Ghanbary | سهیل قنبری"
+      className={'size-full rounded-[inherit] object-cover duration-300'}
     />
   </MotionDiv>
 );
