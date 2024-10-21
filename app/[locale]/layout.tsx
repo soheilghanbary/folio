@@ -45,7 +45,10 @@ export default async function RootLayout({
     >
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
         <meta
           name="google-site-verification"
           content="U1Ry9cck2_sR-yw1BDIa31FxvYJ0fuT7cl-2g-l_7Oo"

@@ -1,5 +1,7 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -17,13 +19,16 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
         hostname: 'www.karlancer.com',
         port: '',
       },
     ],
   },
 };
-
-const withNextIntl = createNextIntlPlugin();
 
 export default withNextIntl(nextConfig);

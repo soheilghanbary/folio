@@ -15,7 +15,7 @@ const AvalibleWork = () => (
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
         <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500" />
       </span>
-      <span className='ml-2 whitespace-pre-wrap text-center font-medium text-foreground text-xs leading-none tracking-tight dark:from-white dark:to-slate-900/10'>
+      <span className="ml-2 whitespace-pre-wrap text-center font-medium text-foreground text-xs leading-none tracking-tight dark:from-white dark:to-slate-900/10">
         Available for work
       </span>
     </ShimmerButton>
@@ -26,7 +26,7 @@ const HeroTitle = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className='font-black text-2xl text-primary md:text-4xl'
+      className="font-black text-2xl text-primary md:text-4xl"
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.3 } },
@@ -40,7 +40,7 @@ const HeroSubtitle = () => {
   const t = useTranslations();
   return (
     <FadeText
-      className='text-center font-bold text-lg'
+      className="text-center font-bold text-lg"
       direction="up"
       framerProps={{
         show: { transition: { delay: 0.5 } },
@@ -92,16 +92,16 @@ const HeroImage = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.7 }}
-    className="relative h-80 w-72 rounded-lg md:h-96 md:w-80"
+    className="relative size-80 rounded-full ring-4 ring-primary/10 ring-offset-4 ring-offset-background"
   >
     <Image
       fill
-      alt="Soheil Ghanbary"
-      src={'/profile.webp'}
       sizes="320px"
-      draggable="false"
       quality={100}
       className={'size-full rounded-[inherit] object-cover duration-300'}
+      draggable="false"
+      alt="Soheil Ghanbary | سهیل قنبری"
+      src={'/soheil-ghanbary.webp'}
     />
   </MotionDiv>
 );
