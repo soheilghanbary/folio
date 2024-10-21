@@ -2,6 +2,9 @@
 
 Hi, This is a Sample Portfolio built with Next.js and Tailwind CSS.
 
+### Screen Shot   
+![Screenshot](https://soheilghanbary.ir/screenshot.png)
+
 ```bash
 bun install
 ```
