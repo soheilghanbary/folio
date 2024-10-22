@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://folio-steel.vercel.app/sitemap.xml',
+    sitemap: 'https://soheilghanbary.ir/sitemap.xml',
   };
 }
