@@ -29,7 +29,12 @@ export function Projects() {
           />
         ))}
       </div>
-      <Button asChild fullRounded className="mx-auto w-fit gap-2">
+      <Button
+        asChild
+        fullRounded
+        variant={'secondary'}
+        className="mx-auto w-fit gap-2"
+      >
         <a
           target="_blank"
           rel="noreferrer"
